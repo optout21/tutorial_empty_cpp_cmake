@@ -7,7 +7,7 @@ set (CPACK_PACKAGE_VERSION_PATCH "0")
 if (DEFINED GIT_COMMIT)
 	set (CPACK_PACKAGE_VERSION_PATCH "GIT-${GIT_COMMIT}")
 endif ()
-set (CPACK_PACKAGE_VENDOR "Catenocrypt")
+set (CPACK_PACKAGE_VENDOR "Empty Vendor")
 
 # Create all libraries and executables in the root binary dir
 set (CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
@@ -51,7 +51,8 @@ SET (CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${PLATFORM_LINK_FLAGS}")
 
 include_directories (${CMAKE_SOURCE_DIR})
 
-add_subdirectory (empty.src)
+add_subdirectory (src/library_sample)
+add_subdirectory (src/executable_empty)
 
 #set (CPACK_RESOURCE_FILE_LICENSE ${CMAKE_SOURCE_DIR}/LICENSE)
 
